@@ -1,0 +1,149 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateMessageFunction > development 1`] = `
+{
+  "ast": {
+    "body": {
+      "end": 5,
+      "items": [
+        {
+          "end": 5,
+          "loc": {
+            "end": {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": {
+              "column": 1,
+              "line": 1,
+              "offset": 0,
+            },
+          },
+          "start": 0,
+          "type": 3,
+          "value": "hello",
+        },
+      ],
+      "loc": {
+        "end": {
+          "column": 6,
+          "line": 1,
+          "offset": 5,
+        },
+        "start": {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "start": 0,
+      "type": 2,
+    },
+    "end": 5,
+    "helpers": [
+      "normalize",
+    ],
+    "loc": {
+      "end": {
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "source": "hello",
+      "start": {
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+    },
+    "start": 0,
+    "type": 0,
+  },
+  "code": "(()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize([\\"hello\\"])};fn.source=\\"hello\\";return fn;})()",
+  "errors": [],
+  "map": {
+    "mappings": "mEAAAA",
+    "names": [
+      "hello",
+    ],
+    "sources": [
+      "message.intl",
+    ],
+    "sourcesContent": [
+      "hello",
+    ],
+    "version": 3,
+  },
+}
+`;
+
+exports[`generateMessageFunction > escapeHtml > default: should not be escaped 1`] = `"(()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize([\\"<p>hello</p>\\"])};fn.source=\\"<p>hello</p>\\";return fn;})()"`;
+
+exports[`generateMessageFunction > escapeHtml > true: should be escaped 1`] = `"(()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize([\\"&lt;p&gt;hello&lt;/p&gt;\\"])};fn.source=\\"<p>hello</p>\\";return fn;})()"`;
+
+exports[`generateMessageFunction > production 1`] = `
+{
+  "ast": {
+    "body": {
+      "end": 5,
+      "items": [
+        {
+          "end": 5,
+          "loc": {
+            "end": {
+              "column": 6,
+              "line": 1,
+              "offset": 5,
+            },
+            "start": {
+              "column": 1,
+              "line": 1,
+              "offset": 0,
+            },
+          },
+          "start": 0,
+          "type": 3,
+          "value": "hello",
+        },
+      ],
+      "loc": {
+        "end": {
+          "column": 6,
+          "line": 1,
+          "offset": 5,
+        },
+        "start": {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "start": 0,
+      "type": 2,
+    },
+    "end": 5,
+    "helpers": [
+      "normalize",
+    ],
+    "loc": {
+      "end": {
+        "column": 6,
+        "line": 1,
+        "offset": 5,
+      },
+      "source": "hello",
+      "start": {
+        "column": 1,
+        "line": 1,
+        "offset": 0,
+      },
+    },
+    "start": 0,
+    "type": 0,
+  },
+  "code": "(ctx) => {const { normalize: _normalize } = ctx;return _normalize([\\"hello\\"])}",
+  "errors": [],
+  "map": undefined,
+}
+`;
